@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(158, 64%, 22%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Custom Clover colors */
+  --emerald-dark: hsl(158, 64%, 22%);
+  --emerald-medium: hsl(158, 73%, 26%);
+  --gold-soft: hsl(42, 96%, 56%);
+  --gold-light: hsl(42, 87%, 55%);
+  --black-rich: hsl(0, 0%, 4%);
+  --black-medium: hsl(0, 0%, 10%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(158, 64%, 22%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-crimson antialiased bg-background text-foreground;
+  }
+}
+
+/* Consistent mesh grid background - smaller and constant throughout */
+.mesh-bg {
+  background-image: 
+    linear-gradient(rgba(6, 78, 59, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 78, 59, 0.15) 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-attachment: fixed;
+}
+
+.mesh-bg-dark {
+  background-image: 
+    linear-gradient(rgba(251, 191, 36, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.1) 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-attachment: fixed;
+}
+
+/* Magical animated background for hero section */
+.mesh-bg-animated {
+  background-image: 
+    linear-gradient(rgba(6, 78, 59, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 78, 59, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 70%),
+    radial-gradient(circle at 80% 20%, rgba(6, 78, 59, 0.1) 0%, transparent 70%),
+    radial-gradient(circle at 40% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 70%);
+  background-size: 15px 15px, 15px 15px, 400px 400px, 300px 300px, 500px 500px;
+  background-attachment: fixed;
+  animation: magicalGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes magicalGlow {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0% 50%, 100% 20%, 40% 80%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 0%, 100% 50%, 0% 20%, 60% 80%;
+  }
+}
+
+/* Font families */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-crimson {
+  font-family: 'Crimson Text', serif;
+}
+
+/* Magical text glow effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+.card-mystical.bg-black-override {
+  background: #0a0a0a !important;
+}
+
+/* Subtle card glow */
+.card-mystical {
+  box-shadow: 0 4px 20px rgba(6, 78, 59, 0.2), inset 0 1px 0 rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  background: rgba(26, 26, 26, 0.7);
+}
+
+/* Grimoire styling */
+.grimoire-card {
+  background: linear-gradient(145deg, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 4%) 100%);
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(251, 191, 36, 0.1);
+}
+
+/* Scroll styling */
+.scroll-bg {
+  background: linear-gradient(145deg, hsl(24, 45%, 17%) 0%, hsl(24, 68%, 4%) 100%);
+  border: 2px solid rgba(251, 191, 36, 0.2);
+  position: relative;
+}
+
+.scroll-bg::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, rgba(251, 191, 36, 0.2), transparent, rgba(251, 191, 36, 0.2));
+  z-index: -1;
+  border-radius: inherit;
+}
+
+/* Magical cursor particles */
+.magical-particle {
+  position: fixed;
+  pointer-events: none;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 1) 0%, rgba(255, 215, 0, 0.8) 40%, transparent 100%);
+  border-radius: 50%;
+  animation: particleFall 2.5s ease-out forwards;
+  z-index: 9999;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.6);
+}
+
+@keyframes particleFall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.3);
+  }
+}
+
+/* Magic wand cursor */
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><line x1="21" y1="25" x2="9" y2="13" stroke="rgba(139,69,19,1)" stroke-width="3" stroke-linecap="round"/><circle cx="8" cy="12" r="2.5" fill="rgba(251,191,36,1)"/><path d="M6 10l-1-1M10 10l1-1M8 8v-1M8 16v1" stroke="rgba(251,191,36,0.7)" stroke-width="1" stroke-linecap="round"/></svg>') 2 2, auto !important;
+}
+
+/* Contact form with transparent owl background */
+.contact-form-with-owl {
+  position: relative;
+}
+
+.contact-form-with-owl::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="80" r="45" fill="rgba(251,191,36,0.05)" stroke="rgba(251,191,36,0.08)" stroke-width="2"/><circle cx="85" cy="70" r="8" fill="rgba(251,191,36,0.1)"/><circle cx="115" cy="70" r="8" fill="rgba(251,191,36,0.1)"/><path d="M100 85 L95 95 L105 95 Z" fill="rgba(251,191,36,0.08)"/><path d="M70 60 Q60 50 50 55" stroke="rgba(251,191,36,0.06)" stroke-width="3" fill="none"/><path d="M130 60 Q140 50 150 55" stroke="rgba(251,191,36,0.06)" stroke-width="3" fill="none"/><ellipse cx="100" cy="130" rx="35" ry="50" fill="rgba(251,191,36,0.04)" stroke="rgba(251,191,36,0.06)" stroke-width="2"/><path d="M80 110 Q70 100 60 105" stroke="rgba(251,191,36,0.05)" stroke-width="2" fill="none"/><path d="M120 110 Q130 100 140 105" stroke="rgba(251,191,36,0.05)" stroke-width="2" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-form-with-owl > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Magic dust particles falling from top */
+.magic-dust {
+  position: fixed;
+  top: -10px;
+  pointer-events: none;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.9) 0%, rgba(255, 215, 0, 0.6) 50%, transparent 100%);
+  border-radius: 50%;
+  animation: dustFall linear infinite;
+  z-index: 1;
+}
+
+@keyframes dustFall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Navbar hover effects */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--emerald-medium), var(--gold-soft));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--gold-soft);
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Button hover effects */
+.btn-mystical:hover {
+  box-shadow: 0 6px 25px rgba(251, 191, 36, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Transparent magical button */
+.btn-magical-transparent {
+  background: rgba(6, 78, 59, 0.1);
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  color: var(--gold-soft);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.btn-magical-transparent:hover {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: var(--gold-soft);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(6, 78, 59, 0.3);
+}
+
+/* Custom colors */
+.text-emerald-dark { color: var(--emerald-dark); }
+.text-emerald-medium { color: var(--emerald-medium); }
+.text-gold-soft { color: var(--gold-soft); }
+.text-gold-light { color: var(--gold-light); }
+.text-black-rich { color: var(--black-rich); }
+.text-black-medium { color: var(--black-medium); }
+
+.bg-emerald-dark { background-color: var(--emerald-dark); }
+.bg-emerald-medium { background-color: var(--emerald-medium); }
+.bg-gold-soft { background-color: var(--gold-soft); }
+.bg-gold-light { background-color: var(--gold-light); }
+.bg-black-rich { background-color: var(--black-rich); }
+.bg-black-medium { background-color: var(--black-medium); }
+
+.border-emerald-dark { border-color: var(--emerald-dark); }
+.border-emerald-medium { border-color: var(--emerald-medium); }
+.border-gold-soft { border-color: var(--gold-soft); }
+.border-gold-light { border-color: var(--gold-light); }
