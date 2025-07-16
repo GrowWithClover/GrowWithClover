@@ -523,7 +523,7 @@ export default function Home() {
     <form
       onSubmit={form.handleSubmit(async (data) => {
         try {
-          const response = await fetch("https://script.google.com/macros/s/YOUR_WEBHOOK_URL_HERE/exec", {
+          const response = await fetch("https://script.google.com/macros/s/AKfycbxbAcRkmw7HNz7Mp5KthZCfb2k-8FfHd6bJTZn0I7tjADvukQc1TZPwaMBQp9bokIVYwQ/exec", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -558,7 +558,7 @@ export default function Home() {
             <FormControl>
               <Input
                 placeholder="Enter your mystical name"
-                className="bg-black-rich/70 border-emerald-dark/50 text-white placeholder-gray-400 focus:border-gold-soft"
+                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft"
                 {...field}
               />
             </FormControl>
@@ -577,7 +577,7 @@ export default function Home() {
               <Input
                 type="email"
                 placeholder="your.email@realm.com"
-                className="bg-black-rich/70 border-emerald-dark/50 text-white placeholder-gray-400 focus:border-gold-soft"
+                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft"
                 {...field}
               />
             </FormControl>
@@ -596,7 +596,7 @@ export default function Home() {
               <Textarea
                 rows={6}
                 placeholder="Share your vision and let the magic begin..."
-                className="bg-black-rich/70 border-emerald-dark/50 text-white placeholder-gray-400 focus:border-gold-soft resize-none"
+                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft resize-none"
                 {...field}
               />
             </FormControl>
