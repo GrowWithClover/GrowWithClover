@@ -289,7 +289,7 @@ export default function Home() {
                 <SectionCard variant="mystical" className="h-full">
                   <div className="text-center">
                     <Palette className="text-4xl text-emerald-medium mb-4 mx-auto" />
-                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Design Enchantment</h3>
+                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Website Development</h3>
                     <p className="text-gray-300 text-sm">Build captivating and high-performing websites designed to convert visitors into loyal customers.</p>
                   </div>
                 </SectionCard>
