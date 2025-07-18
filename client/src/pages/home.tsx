@@ -524,7 +524,7 @@ export default function Home() {
     <form
       onSubmit={form.handleSubmit(async (data) => {
         try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbxbAcRkmw7HNz7Mp5KthZCfb2k-8FfHd6bJTZn0I7tjADvukQc1TZPwaMBQp9bokIVYwQ/exec", {
+          const response = await fetch("https://script.google.com/macros/s/AKfycbzGgj9zM38n76OQaPr_nZaN-qYJ2CNRKwZOMpmG-S3CMR0tvAhaM7pY9n-Ha1ekKbHPAg/exec", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
