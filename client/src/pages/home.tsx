@@ -270,7 +270,7 @@ export default function Home() {
                   <div className="text-center">
                     <Globe className="text-4xl text-emerald-medium mb-4 mx-auto" />
                     <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Digital Presence</h3>
-                    <p className="text-gray-300 text-sm">Manifest your brand across the digital realm with mystical web experiences that captivate and convert.</p>
+                    <p className="text-gray-300 text-sm">Cultivate a strong online presence and engage with your audience across all major social platforms.</p>
                   </div>
                 </SectionCard>
               </motion.div>
@@ -279,8 +279,8 @@ export default function Home() {
                 <SectionCard variant="mystical" className="h-full">
                   <div className="text-center">
                     <Hash className="text-4xl text-emerald-medium mb-4 mx-auto" />
-                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Social Sorcery</h3>
-                    <p className="text-gray-300 text-sm">Weave compelling narratives across social platforms, building communities that rally around your brand.</p>
+                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">User Acquisition</h3>
+                    <p className="text-gray-300 text-sm">Attract new customers and expand your reach through targeted campaigns and strategic outreach.</p>
                   </div>
                 </SectionCard>
               </motion.div>
@@ -290,7 +290,7 @@ export default function Home() {
                   <div className="text-center">
                     <Palette className="text-4xl text-emerald-medium mb-4 mx-auto" />
                     <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Design Enchantment</h3>
-                    <p className="text-gray-300 text-sm">Forge visual identities that resonate with power, from mystical logos to captivating marketing materials.</p>
+                    <p className="text-gray-300 text-sm">Build captivating and high-performing websites designed to convert visitors into loyal customers.</p>
                   </div>
                 </SectionCard>
               </motion.div>
@@ -299,8 +299,8 @@ export default function Home() {
                 <SectionCard variant="mystical" className="h-full">
                   <div className="text-center">
                     <Code className="text-4xl text-emerald-medium mb-4 mx-auto" />
-                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Web Wizardry</h3>
-                    <p className="text-gray-300 text-sm">Craft digital sanctuaries where your audience finds exactly what their souls seek, built with modern magic.</p>
+                    <h3 className="font-cinzel text-xl font-semibold mb-3 text-gold-soft">Brand Strategy & Design</h3>
+                    <p className="text-gray-300 text-sm">Forge a unique brand identity that resonates with your target market and sets you apart from the competition.</p>
                   </div>
                 </SectionCard>
               </motion.div>
@@ -390,7 +390,7 @@ export default function Home() {
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Brand Makeover</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Advanced automation</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Event Support</li>
-                      <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Priority support</li>
+                      <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Basic Website Development</li>
                     </ul>
                     <MagicalButton variant="gold" className="w-full mt-auto"
                       onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}>
