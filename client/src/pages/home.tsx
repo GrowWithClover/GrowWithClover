@@ -413,7 +413,8 @@ export default function Home() {
                   <h3 className="font-cinzel text-2xl font-bold mb-4 text-gold-soft">Custom Enchantment</h3>
                   <p className="text-gray-300 mb-6">Need something beyond our standard grimoires? Let us craft a bespoke magical solution tailored to your unique vision. (We Provide User Aquisition and Website Development Services)</p>
                   <MagicalButton>
-                    <WandSparkles className="mr-2 h-4 w-4" />
+                    <WandSparkles className="mr-2 h-4 w-4" 
+                    onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}/>
                     Commission Custom WandSparkles
                   </MagicalButton>
                 </div>
