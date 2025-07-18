@@ -540,7 +540,6 @@ export default function Home() {
             throw new Error("Network response was not ok");
           }
 
-          // Optionally show success toast or reset form
           alert("Your magical message has been sent to the guild!");
           form.reset();
         } catch (error) {
