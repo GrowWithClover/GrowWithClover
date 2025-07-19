@@ -384,7 +384,7 @@ export default function Home() {
                   <div className="text-center h-full flex flex-col">
                     <h3 className="font-cinzel text-2xl font-bold mb-2 text-gold-soft">Master</h3>
                     <p className="text-gray-400 mb-6">Complete marketing mastery</p>
-                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹3,999<span className="text-lg text-gray-400">/mo</span></div>
+                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹4,599<span className="text-lg text-gray-400">/mo</span></div>
                     <ul className="text-left space-y-3 mb-8 flex-grow">
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Everything in Mystic</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Brand Makeover</li>
