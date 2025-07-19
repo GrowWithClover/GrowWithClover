@@ -340,7 +340,7 @@ export default function Home() {
                   <div className="text-center h-full flex flex-col">
                     <h3 className="font-cinzel text-2xl font-bold mb-2 text-gold-soft">Spark</h3>
                     <p className="text-gray-400 mb-6">Perfect for emerging ventures</p>
-                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹999<span className="text-lg text-gray-400">/mo</span></div>
+                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹1,749<span className="text-lg text-gray-400">/mo</span></div>
                     <ul className="text-left space-y-3 mb-8 flex-grow">
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Reels, Posts, Stories (any 2 platforms)</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Carousel design</li>
@@ -363,7 +363,7 @@ export default function Home() {
                   <div className="text-center h-full flex flex-col">
                     <h3 className="font-cinzel text-2xl font-bold mb-2 text-gold-soft">Mystic</h3>
                     <p className="text-gray-400 mb-6">For growing businesses</p>
-                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹2499<span className="text-lg text-gray-400">/mo</span></div>
+                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹3,799<span className="text-lg text-gray-400">/mo</span></div>
                     <ul className="text-left space-y-3 mb-8 flex-grow">
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Everything in Spark</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Business card/Flyer designs</li>
@@ -384,7 +384,7 @@ export default function Home() {
                   <div className="text-center h-full flex flex-col">
                     <h3 className="font-cinzel text-2xl font-bold mb-2 text-gold-soft">Master</h3>
                     <p className="text-gray-400 mb-6">Complete marketing mastery</p>
-                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹3499<span className="text-lg text-gray-400">/mo</span></div>
+                    <div className="text-4xl font-bold mb-6 text-emerald-medium">₹3,999<span className="text-lg text-gray-400">/mo</span></div>
                     <ul className="text-left space-y-3 mb-8 flex-grow">
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Everything in Mystic</li>
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Brand Makeover</li>
