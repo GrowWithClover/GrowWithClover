@@ -14,6 +14,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { useMagicDust } from "@/hooks/use-magic-dust";
 import { apiRequest } from "@/lib/queryClient";
+import { trackBusinessEvent } from "@/lib/analytics";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { 
   Gem, 
@@ -87,6 +88,8 @@ export default function Home() {
   };
 
   const scrollToSection = (sectionId: string) => {
+    // Track navigation clicks
+    trackBusinessEvent.navigationClick(sectionId);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -348,7 +351,10 @@ export default function Home() {
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Social Media Creation</li>
                     </ul>
                     <MagicalButton variant="gold" className="w-full mt-auto"
-                      onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}>
+                      onClick={() => {
+                        trackBusinessEvent.expressInterest('Spark');
+                        window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank');
+                      }}>
                       Express Interest
                     </MagicalButton>
                   </div>
@@ -372,7 +378,10 @@ export default function Home() {
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Mini Social Media Audit (report only)</li>
                     </ul>
                     <MagicalButton variant="gold" className="w-full mt-auto"
-                      onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}>
+                      onClick={() => {
+                        trackBusinessEvent.expressInterest('Mystic');
+                        window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank');
+                      }}>
                       Express Interest
                     </MagicalButton>
                   </div>
@@ -393,7 +402,10 @@ export default function Home() {
                       <li className="flex items-center"><Check className="text-emerald-medium mr-3 h-4 w-4" />Basic Website Development</li>
                     </ul>
                     <MagicalButton variant="gold" className="w-full mt-auto"
-                      onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}>
+                      onClick={() => {
+                        trackBusinessEvent.expressInterest('Master');
+                        window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank');
+                      }}>
                       Express Interest
                     </MagicalButton>
                   </div>
@@ -412,7 +424,10 @@ export default function Home() {
                 <div className="text-center">
                   <h3 className="font-cinzel text-2xl font-bold mb-4 text-gold-soft">Custom Enchantment</h3>
                   <p className="text-gray-300 mb-6">Need something beyond our standard grimoires? Let us craft a bespoke magical solution tailored to your unique vision. (We Provide User Aquisition and Website Development Services)</p>
-                  <MagicalButton onClick={() => window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank')}>
+                  <MagicalButton onClick={() => {
+                    trackBusinessEvent.expressInterest('Custom Enchantment');
+                    window.open('https://forms.gle/PExZuWjHidxUcRrh8', '_blank');
+                  }}>
                     <WandSparkles className="mr-2 h-4 w-4" />
                     Commission Custom WandSparkles
                   </MagicalButton>
@@ -539,6 +554,8 @@ export default function Home() {
             throw new Error("Network response was not ok");
           }
 
+          // Track successful form submission
+          trackBusinessEvent.contactFormSubmit();
           alert("Your magical message has been sent to the guild!");
           form.reset();
         } catch (error) {
@@ -656,22 +673,26 @@ export default function Home() {
                   <a  href="https://www.linkedin.com/company/growwithcloveragency" 
                       target="_blank"
                       rel="noopener noreferrer" 
+                      onClick={() => trackBusinessEvent.socialMediaClick('LinkedIn')}
                       className="w-10 h-10 btn-magical-transparent hover:bg-emerald-medium rounded-full flex items-center justify-center transition-colors group">
                     <Linkedin className="text-gold-soft text-sm w-4 h-4 group-hover:scale-110 transition-transform" />
                   </a>
                   <a  href="https://x.com/GrowWithClover_" 
                       target="_blank"
                       rel="noopener noreferrer" 
+                      onClick={() => trackBusinessEvent.socialMediaClick('Twitter')}
                       className="w-10 h-10 btn-magical-transparent hover:bg-emerald-medium rounded-full flex items-center justify-center transition-colors group">
                     <Twitter className="text-gold-soft text-sm w-4 h-4 group-hover:scale-110 transition-transform" />
                   </a>
                   <a  href="https://www.instagram.com/growwithclover_"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackBusinessEvent.socialMediaClick('Instagram')}
                       className="w-10 h-10 btn-magical-transparent hover:bg-emerald-medium rounded-full flex items-center justify-center transition-colors group">
                     <Instagram className="text-gold-soft text-sm w-4 h-4 group-hover:scale-110 transition-transform" />
                   </a>
                   <a  href="mailto:growwithcloveragency@gmail.com"
+                      onClick={() => trackBusinessEvent.socialMediaClick('Email')}
                       className="w-10 h-10 btn-magical-transparent hover:bg-emerald-medium rounded-full flex items-center justify-center transition-colors group">
                     <Mail className="text-gold-soft text-sm w-4 h-4 group-hover:scale-110 transition-transform" />
                   </a>
