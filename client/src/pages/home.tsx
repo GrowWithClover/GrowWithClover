@@ -508,7 +508,7 @@ export default function Home() {
       </MeshBackground> */}
 
       {/* Contact Section */}
-      <MeshBackground className="py-20">
+      {/* <MeshBackground className="py-20">
         <section id="contact">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
@@ -637,7 +637,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-      </MeshBackground>
+      </MeshBackground> */}
 
       {/* Footer */}
       <MeshBackground className="border-t border-emerald-dark/20 py-12" variant="light">
