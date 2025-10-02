@@ -109,7 +109,7 @@ export default function Home() {
                 <button onClick={() => scrollToSection('about')} className="nav-link font-cinzel text-gray-300 px-3 py-2 text-base font-medium">About</button>
                 <button onClick={() => scrollToSection('services')} className="nav-link font-cinzel text-gray-300 px-3 py-2 text-base font-medium">Services</button>
                 <button onClick={() => scrollToSection('pricing')} className="nav-link font-cinzel text-gray-300 px-3 py-2 text-base font-medium">Pricing</button>
-                <button onClick={() => scrollToSection('contact')} className="nav-link font-cinzel text-gray-300 px-3 py-2 text-base font-medium">Contact</button>
+                {/* <button onClick={() => scrollToSection('contact')} className="nav-link font-cinzel text-gray-300 px-3 py-2 text-base font-medium">Contact</button> */}
               </div>
             </div>
           </div>
