@@ -312,6 +312,68 @@ export default function Home() {
         </section>
       </MeshBackground>
 
+      {/* === Proof of Work Section === */}
+<section id="proof" className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold mb-12">Proof of Work</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Company 1 */}
+      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+        <img
+          src="/images/company1.jpg"
+          alt="Company 1"
+          className="rounded-xl w-full h-48 object-cover mb-4"
+        />
+        <h3 className="text-xl font-semibold">Company One</h3>
+        <a href="https://company1.com" target="_blank" className="text-blue-500 hover:underline">
+          company1.com
+        </a>
+        <div className="mt-3 flex justify-center gap-4 text-gray-600">
+          <a href="https://instagram.com/company1" target="_blank">Instagram</a>
+          <a href="https://linkedin.com/company/company1" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/company1" target="_blank">Twitter</a>
+        </div>
+      </div>
+
+      {/* Company 2 */}
+      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+        <img
+          src="/images/company2.jpg"
+          alt="Company 2"
+          className="rounded-xl w-full h-48 object-cover mb-4"
+        />
+        <h3 className="text-xl font-semibold">Company Two</h3>
+        <a href="https://company2.com" target="_blank" className="text-blue-500 hover:underline">
+          company2.com
+        </a>
+        <div className="mt-3 flex justify-center gap-4 text-gray-600">
+          <a href="https://instagram.com/company2" target="_blank">Instagram</a>
+          <a href="https://linkedin.com/company/company2" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/company2" target="_blank">Twitter</a>
+        </div>
+      </div>
+
+      {/* Company 3 */}
+      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+        <img
+          src="/images/company3.jpg"
+          alt="Company 3"
+          className="rounded-xl w-full h-48 object-cover mb-4"
+        />
+        <h3 className="text-xl font-semibold">Company Three</h3>
+        <a href="https://company3.com" target="_blank" className="text-blue-500 hover:underline">
+          company3.com
+        </a>
+        <div className="mt-3 flex justify-center gap-4 text-gray-600">
+          <a href="https://instagram.com/company3" target="_blank">Instagram</a>
+          <a href="https://linkedin.com/company/company3" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/company3" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Pricing Section */}
       <MeshBackground className="py-20" variant="dark">
         <section id="pricing">
@@ -507,137 +569,56 @@ export default function Home() {
         </section>
       </MeshBackground> */}
 
-      {/* Contact Section */}
-      {/* <MeshBackground className="py-20">
-        <section id="contact">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              className="text-center mb-16"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <h2 className="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold-soft">
-                Cast a Message
-              </h2>
-              <p className="text-xl text-gray-300">
-                Send your intentions across the mystical realm and let us weave magic together
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="max-w-2xl mx-auto"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <SectionCard variant="scroll" className="contact-form-with-owl">
-  <Form {...form}>
+     {/* === Contact Us Section === */}
+<section id="contact" className="py-20 bg-white">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+    <p className="text-gray-600 mb-8">
+      Have a project in mind or want to collaborate? Let’s connect!
+    </p>
+
     <form
-      onSubmit={form.handleSubmit(async (data) => {
-        try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbzGgj9zM38n76OQaPr_nZaN-qYJ2CNRKwZOMpmG-S3CMR0tvAhaM7pY9n-Ha1ekKbHPAg/exec", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              name: data.name,
-              email: data.email,
-              message: data.message,
-            }),
-          });
-
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-
-          // Track successful form submission
-          trackBusinessEvent.contactFormSubmit();
-          alert("Your magical message has been sent to the guild!");
-          form.reset();
-        } catch (error) {
-          console.error("Error sending message to Google Sheets:", error);
-          alert("Oops! The owls couldn't deliver your message. Try again later.");
-        }
-      })}
-      className="space-y-6"
+      action="mailto:your@email.com"
+      method="POST"
+      encType="text/plain"
+      className="max-w-lg mx-auto bg-gray-50 shadow-md rounded-2xl p-8"
     >
-      <FormField
-        control={form.control}
-        name="name"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-gold-soft font-cinzel text-lg">Your Name</FormLabel>
-            <FormControl>
-              <Input
-                placeholder="Enter your mystical name"
-                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft"
-                {...field}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="email"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-gold-soft font-cinzel text-lg">Your Email</FormLabel>
-            <FormControl>
-              <Input
-                type="email"
-                placeholder="your.email@realm.com"
-                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft"
-                {...field}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="message"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-gold-soft font-cinzel text-lg">Your Message</FormLabel>
-            <FormControl>
-              <Textarea
-                rows={6}
-                placeholder="Share your vision and let the magic begin..."
-                className="bg-black-rich/70 border-emerald-dark/50 text-black placeholder-gray-400 focus:border-gold-soft resize-none"
-                {...field}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <div className="text-center">
-        <button
-          type="submit"
-          className="btn-magical-transparent font-cinzel font-semibold px-8 py-4 text-lg rounded-lg"
-        >
-          <NotebookPen className="mr-2 h-4 w-4 inline" />
-          Send Message
-        </button>
+      <div className="mb-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
+      <div className="mb-4">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div className="mb-6">
+        <textarea
+          name="message"
+          rows={4}
+          placeholder="Your Message"
+          required
+          className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
+      >
+        Send Message
+      </button>
     </form>
-  </Form>
-</SectionCard>
-
-            </motion.div>
-          </div>
-        </section>
-      </MeshBackground> */}
+  </div>
+</section>
 
       {/* Footer */}
       <MeshBackground className="border-t border-emerald-dark/20 py-12" variant="light">
