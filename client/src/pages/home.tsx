@@ -313,30 +313,30 @@ export default function Home() {
       </MeshBackground>
 
       {/* === Proof of Work Section === */}
-<section id="proof" className="py-20 bg-gray-50">
+      { /*<section id="proof" className="py-20 bg-gray-50">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-4xl font-bold mb-12">Proof of Work</h2>
     <div className="grid md:grid-cols-3 gap-8">
-      {/* Company 1 */}
-      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+      {/* Company 1 */
+        {/* <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
         <img
-          src="/images/company1.jpg"
+          src="https://1drv.ms/i/c/039cdf1e6db54d3e/EcMKhjcGuFlKkQERsgZ3JbAB2MQ_f2WiqEYjCQSYywK42w?e=3mm75L"
           alt="Company 1"
           className="rounded-xl w-full h-48 object-cover mb-4"
         />
         <h3 className="text-xl font-semibold">Company One</h3>
-        <a href="https://company1.com" target="_blank" className="text-blue-500 hover:underline">
-          company1.com
+        <a href="https://www.healthyhomeonline.in/?srsltid=AfmBOop8vdvpsJVBkKZXVYzcZ7j-SttUnF87xk54OR9qTPJtc5wRos-o" target="_blank" className="text-blue-500 hover:underline">
+          Healthy Home
         </a>
         <div className="mt-3 flex justify-center gap-4 text-gray-600">
-          <a href="https://instagram.com/company1" target="_blank">Instagram</a>
-          <a href="https://linkedin.com/company/company1" target="_blank">LinkedIn</a>
-          <a href="https://twitter.com/company1" target="_blank">Twitter</a>
-        </div>
-      </div>
+          <a href="https://www.instagram.com/healthy_home_2021?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+          <a href="https://linkedin.com/company/company1" target="_blank">Facebook</a>
+          {/* <a href="https://twitter.com/company1" target="_blank">Twitter</a> */}
+        {/*  </div>
+      </div> */}
 
       {/* Company 2 */}
-      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+      { /*<div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
         <img
           src="/images/company2.jpg"
           alt="Company 2"
@@ -344,35 +344,17 @@ export default function Home() {
         />
         <h3 className="text-xl font-semibold">Company Two</h3>
         <a href="https://company2.com" target="_blank" className="text-blue-500 hover:underline">
-          company2.com
+          printF
         </a>
         <div className="mt-3 flex justify-center gap-4 text-gray-600">
-          <a href="https://instagram.com/company2" target="_blank">Instagram</a>
-          <a href="https://linkedin.com/company/company2" target="_blank">LinkedIn</a>
-          <a href="https://twitter.com/company2" target="_blank">Twitter</a>
-        </div>
-      </div>
-
-      {/* Company 3 */}
-      <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
-        <img
-          src="/images/company3.jpg"
-          alt="Company 3"
-          className="rounded-xl w-full h-48 object-cover mb-4"
-        />
-        <h3 className="text-xl font-semibold">Company Three</h3>
-        <a href="https://company3.com" target="_blank" className="text-blue-500 hover:underline">
-          company3.com
-        </a>
-        <div className="mt-3 flex justify-center gap-4 text-gray-600">
-          <a href="https://instagram.com/company3" target="_blank">Instagram</a>
-          <a href="https://linkedin.com/company/company3" target="_blank">LinkedIn</a>
-          <a href="https://twitter.com/company3" target="_blank">Twitter</a>
-        </div>
+          <a href="https://www.instagram.com/print_f_india?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/company/107154295/admin/dashboard/" target="_blank">LinkedIn</a>
+          {/* <a href="https://twitter.com/company2" target="_blank">Twitter</a> */}
+      {/* </div>
       </div>
     </div>
   </div>
-</section>
+</section> */ }
 
       {/* Pricing Section */}
       <MeshBackground className="py-20" variant="dark">
@@ -570,7 +552,7 @@ export default function Home() {
       </MeshBackground> */}
 
      {/* === Contact Us Section === */}
-<section id="contact" className="py-20 bg-white">
+      {/*<section id="contact" className="py-20 bg-white">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
     <p className="text-gray-600 mb-8">
@@ -578,7 +560,7 @@ export default function Home() {
     </p>
 
     <form
-      action="mailto:your@email.com"
+      action="growwithcloveragency@gmail.com"
       method="POST"
       encType="text/plain"
       className="max-w-lg mx-auto bg-gray-50 shadow-md rounded-2xl p-8"
@@ -618,7 +600,7 @@ export default function Home() {
       </button>
     </form>
   </div>
-</section>
+</section> */}
 
       {/* Footer */}
       <MeshBackground className="border-t border-emerald-dark/20 py-12" variant="light">
